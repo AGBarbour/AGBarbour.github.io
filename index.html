@@ -1,79 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Weather Visualization</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <head>
 
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<body>
-    <nav class="navbar navbar-default navbar-expand-lg">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">Latitude</a>
-          </div>
-    
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="data.html">Data <span class="sr-only">(current)</span></a></li>
-                <li><a href="comparison.html">Comparison</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="max_temp.html">Max Temperature</a></li>
-                  <li><a href="humidity.html">Humidity</a></li>
-                  <li><a href="cloudiness.html">Cloudiness</a></li>
-                  <li><a href="wind_speed.html">Wind Speed</a></li>
-                </ul>
-              </li>
-            </ul>
+    <title>Alex Barbour</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/web.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+          <img class="rounded-circle" width="80" height="80" src="img/headshot.jpg">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="margin-left:0.5rem;">Alex Barbour</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
-</nav>
+      </div>
+    </nav>
 
-
-<div class="container-fluid">
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
         <div class="row">
-            <div class="col-lg-7 col-sm-12">
-                <h1>A Study of Weather Variance by Latitude</h1>
-                <hr>
-                <img src="Resources/max_temp.png" alt="Landing Pic"  class="landimg">
-                <p style="font-size:120%;">This study was conducted to analyze the variance in weather along earth’s latitudinal axis. Measurements were collected from 
-                    more than 500 random cities across the globe using the OpenWeatherMap API. Four data points were queried for each city: maximum 
-                    temperature, cloudiness, wind speed, and humidity. The analysis and visualizations were performed using Matplotlib and Seaborn.</p>
-                <br>
-                <p style="font-size:120%;">The data set used in the analysis is located under the Data tab. Detailed descriptions and analysis for each plot can be found
-                     by clicking on one of the visualizations or by navigating the Plots tab. A limitation of the study was the narrow time frame for 
-                     which data was collected. The study could be improved by collecting data each day for a month. The study was further limited by 
-                     the data collection methods. The cities were random, but the gathering data from a city and not random geographic coordinates 
-                     introduces a selection bias. To eliminate some of the bias, the geographic coverage of the cities would need to be examined, 
-                     or the data source would have to be reconsidered.</p>
+          <div class="col-lg-10 mx-auto">
+            <h2 class="text-uppercase">
+              Portfolio
+            </h2>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">Analysis | Visualization | Wrangling</p>
+            <p class="text-faded mb-5">Data and statistics enthusiast <br>
+              seeking new challenges and opportunities. <br>
+              Well versed in Python, JavaScript, SQL, <br>
+              and a variety of visualization and statistical packages. </p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">About Me</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Short Background</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">I come from a background in healthcare. As an undergraduate, 
+              I was on the premed track, but after shadowing doctors I decided to change trajectories
+               to a career path that suited my personality and skillset. This has lead me to pursue a 
+               career in data science. I am looking to break into the industry after graduating from KU’s 
+               data analytics program by leveraging my strong foundation in analytics and statistics garnered
+                from my BS in Biochemistry. I have discovered a new challenge and passion in programing.
+                 I love to unravel difficult problems, and pursue unique solutions. I am excited for new
+                  opportunities and challenges, and look forward to impacting health outcomes via data driven measures.   
+            </p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#skills">View Skills</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h4 class="section-heading">Languages | Programs | Libraries</h4>
+              <hr class="my-4">
             </div>
-            <div class="col-lg-4 col-sm-12">
-                    <h2>Visualizations</h2>
-                    <hr>
-                    <div class="row">
-                            <a href="max_temp.html"><img src="Resources/max_temp.png" alt="Max Temp"></a>
-                            <a href="humidity.html"><img src="Resources/humidity.png" alt="Humidity"></a>
-                    </div> 
-                    <div class="row">
-                            <a href="cloudiness.html"><img src="Resources/cloudiness.png" alt="Cloudiness"></a>
-                            <a href="wind_speed.html"><img src="Resources/wind_speed.png" alt="Wind Speed" ></a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-md-6 text-center">
+                  <div class="service-box mt-5 mx-auto">
+                    <i><img id="hjc" src="img/Python.png" style="width: 80px; height: 80px; border-radius: 10%;"></i>
+                    <h5 class="mb-3">Python</h5>
+                  </div>
+            </div>
+            <div class="col-lg-2 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                  <i><img id="hjc" src="img/js.jpg" style="width: 80px; height: 80px; border-radius: 10%;"></i>
+                  <h5 class="mb-3">Javascript</h5>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6 text-center">
+                  <div class="service-box mt-5 mx-auto">
+                    <i><img id="hjc" src="img/r.png" style="width: 80px; height: 80px; border-radius: 10%;"></i>
+                    <h5 class="mb-3">R</h5>
+                  </div>
+                </div>              
+            <div class="col-lg-2 col-md-6 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <i>
+                  <img id="hjc" src="img/htmlcss.png" style="width: 100px; height: 80px; border-radius: 10%;">
+                </i>
+                <h5 class="mb-3">HTML 5 & CSS 3</h5>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <i><img id="hjc" src="img/mysql.jpg" style="width: 80px; height: 80px; border-radius: 10%;"></i>
+                <h5 class="mb-3">MySQL</h5>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <i><img id="hjc" src="img/tableau.png" style="width: 80px; height: 80px; border-radius: 10%;"></i>
+                <h5 class="mb-3">Tableau</h5>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <i><img id="hjc" src="img/pandas-logo.png" style="width: 100px; height: 80px; border-radius: 10%;"></i>
+                <h5 class="mb-3">Pandas</h5>
+              </div>
+            </div>
+             <div class="col-lg-2 col-md-6 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <i><img id="hjc" src="img/D3.png" style="width: 80px; height: 80px; border-radius: 10%;"></i>
+                <h5 class="mb-3"> D3.js</h5>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                  <i><img id="hjc" src="img/plotly.png" style="width: 80px; height: 80px; border-radius: 10%;"></i>
+                  <h5 class="mb-3">Plotly</h5>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i><img id="hjc" src="img/Flask.png" style="width: 80px; height: 80px; border-radius: 10%;"></i>
+              <h5 class="mb-3">Flask</h5>
+            </div>
+          </div>   
+          <div class="col-lg-2 col-md-6 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <i><img id="hjc" src="img/scikit.jpg" style="width: 100px; height: 80px; border-radius: 10%;"></i>
+                <h5 class="mb-3">Scikit Learn</h5>
+              </div>
+          </div> 
+          <div class="col-lg-2 col-md-6 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <i><img id="hjc" src="img/bash.png" style="width: 80px; height: 80px; border-radius: 10%;"></i>
+                <h5 class="mb-3">GitBash</h5>
+              </div>
+          </div>      
+        </div>        
+      </div>
+        <div class="container" style="margin-top:1.5rem;">
+          <div class="col-lg-8 mx-auto text-center">
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#projects">Projects</a>
+          </div>
+        </div>
+    </section>
+    <section class="bg-primary" id="projects">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">My Projects</h2>
+            <hr class="light my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 text-center d-flex align-items-stretch" style="margin-top:1.5rem;">
+                <div class="card">
+                    <img class="card-img-top" src="img/AoM.PNG" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">The Anatomy of Music</h5>
+                        <p class="card-text">
+                            The focus of this project was to analyze what components of a song predict popularity. 
+                            We looked at song availability by country, track features provided by Spotify, and the genre distribution 
+                            for the dataset. I was responsible for data collection using Spotify's Web API, genre analysis,
+                             and integrating our javascript into a presentation using reveal.
+                        </p>
+                        <p class="card-text">Tech: Spotify Web API, Python, JavaScript, Flask, Pandas, SQLite, Plotly, D3.js, 
+                          Leaflet, and <a href="https://github.com/hakimel/reveal.js/" target="_blank">reveal.js</a></p>
+                        <a href="https://anatomy-of-music.herokuapp.com/" target="_blank" style="margin-right:1.5rem;" class="btn btn-primary">Project</a>
+                        <a href="https://github.com/AGBarbour/Anatomy-of-Music" target="_blank" style="margin-left:1.5rem;" class="btn btn-primary">Git Repo</a>
                     </div>
-            </div>       
-    </div>
-</div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 text-center d-flex align-items-stretch" style="margin-top:1.5rem;">
+              <div class="card">
+                  <img class="card-img-top" src="img/ML.PNG" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title">Spotify Recomendation Engine</h5>
+                      <p class="card-text">We set out to build a engine capable of generating song recommendations in
+                            real time based on user input, but we found model run times exceeded realistic wait times for the user.
+                            Currently we are presenting static results for three models: deep learning, KNN, and SVM. We  The data is presented
+                            for the song My Heart Will Go On. I was responsible for data collection using the Spotify Web API and generating
+                            predictions using the KNN model.We are continuing to evaluate our approach in order to improve run time and recommendation granularity.
+                      </p>
+                      <p class="card-text">Tech: Scikit-Learn, Spotify Web API, Python, JavaScript, Flask, Pandas, SQLite and D3.js</a>
+                      </p>
+                      <a href="templates/spotify_rec.html"  target="_blank" style="margin-right:1.5rem;" class="btn btn-primary">Project</a>
+                      <a href="https://github.com/AGBarbour/Spotify-Recommendations" target="_blank" style="margin-left:1.5rem;" class="btn btn-primary">Git Repo</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center d-flex align-items-stretch" style="margin-top:2rem;">
+              <div class="card">
+                  <img class="card-img-top" src="img/max_temp.png" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title">Weather Analysis</h5>
+                      <p class="card-text">For this project, I utilized the Open Weather Map API to analyze global weather trends
+                         in 600 random cities. I created this website to neatly display the findings for this analysis.</p>
+                      <p class="card-text">Tech: API interactions, Python, Pandas, Seabron, CitiPy, and numpy</p>
+                      <a href="templates/Latitude/latitude.html" target="_blank" style="margin-right:1.5rem;" class="btn btn-primary">Project</a>
+                      <a href="https://github.com/AGBarbour/Latitude_Analysis" target="_blank" class="btn btn-primary">Git Repo</a>
+                  </div>
+              </div>
+            </div>   
+            <div class="col-lg-4 col-md-6 text-center d-flex align-items-stretch" style="margin-top:2rem;">
+              <div class="card">
+                  <img class="card-img-top" src="img/earthquake.PNG" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title">Interactive Seismic Map</h5>
+                      <p class="card-text">Leaflet map which displays recent seismic activity around the globe. 
+                        The fault lines and earthquakes are represented by separate layers and can be toggled using the 
+                        check boxes. Dark and light themes are also available just above the layers. More detailed information 
+                        about individual earthquakes can be found by clicking any dot.</p>
+                      <p class="card-text">Tech: Leaftlet, JavaScript, D3.js, and API interactions</p>
+                      <a href="templates/earthquake.html" target="_blank" style="margin-right:1.5rem;" class="btn btn-primary">Map</a>
+                      <a href="https://github.com/AGBarbour/Earthquake-Analysis" target="_blank" class="btn btn-primary">Git Repo</a>
+                  </div>
+              </div>
+            </div> 
+            <div class="col-lg-4 col-md-6 text-center  d-flex align-items-stretch" style="margin-top:2rem;">
+              <div class="card">
+                  <img class="card-img-top" src="img/d3-scatter.PNG" alt="Card image cap">
+                  <div class="card-body">
+                      <h5 class="card-title">Dynamic Scatter Plot</h5>
+                      <p class="card-text">Interactive scatter plot which allows the user to interchange data to compare
+                         six different data sets. The plot will update on click and the axis will scale accordingly. 
+                         Each data point has a tooltip that will display the state name and relevant data while the cursor
+                          hovers over it. </p>
+                      <p class="card-text">Tech: JavaScript, D3.js, and HTML/CSS</p>
+                      <a href="templates/d3_scatter.html" target="_blank" style="margin-right:1.5rem;" class="btn btn-primary">Project</a>
+                      <a href="https://github.com/AGBarbour/d3-scatter" class="btn btn-primary">Git Repo</a>
+                  </div>
+              </div>
+            </div> 
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-3 text-center  d-flex align-items-stretch" style="margin-top:2rem;">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Mars Web Scraper</h5>
+                      <p class="card-text">Scraper built with BeautifulSoup and Splinter designed to grab pictures, news, and an info table from <a href="https://mars.nasa.gov/">mars.nasa.gov</a>.</p>
+                      <a href="https://github.com/AGBarbour/Web-Scraping" target="_blank" class="card-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center  d-flex align-items-stretch" style="margin-top:2rem;">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Pharmaceutical Analysis</h5>
+                      <p class="card-text">Analyzed tumor data from a hypothetical drug trial in python using pandas, numpy, and matplotlib. </p>
+                      <a href="https://github.com/AGBarbour/Drug_Analysis/blob/master/Pharma%20Analysis.md" target="_blank" class="card-link">Markdown</a>
+                      <a href="https://github.com/AGBarbour/Drug_Analysis/blob/master/Pharma%20Analysis.ipynb" target="_blank" class="card-link">Notebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center  d-flex align-items-stretch" style="margin-top:2rem;">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Twitter Sentiment Analysis</h5>
+                      <p class="card-text">Used tweepy to collect tweets from news outlets, and analyzed the polarity of each tweet using <a href="https://github.com/cjhutto/vaderSentiment">VADER sentiment analysis</a>.</p>
+                      <a href="https://github.com/AGBarbour/Twitter_Analytics/blob/master/Twitter%20Sentiment%20Analytics.ipynb" target="_blank" class="card-link">Notebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-center  d-flex align-items-stretch" style="margin-top:2rem;">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Data Dashboard</h5>
+                      <p class="card-text">Dynamic dashboard comprised of an unique svg, pie chart, 
+                        and scatter which update with new data selection. Built using Flask, D3.js, and SQLite.</p>
+                      <a href="https://github.com/AGBarbour/BB-Biodiversity" target="_blank" class="card-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="container" style="margin-top:3rem;">
+        <div class="col-lg-8 mx-auto text-center">
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#contact">Contact</a>
+        </div>
+      </div>
+     
+    </section>
+    <section class="bg-dark text-white" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Contact Info</h2>
+            <hr class="my-4">
+            <p class="mb-5"></p>           
+   
+            <div class="row text-center">
+              <div class="col-lg-4 ml-auto text-center">
+                <i class="fab fa-linkedin fa-3x mb-3 sr-contact-2"></i>
+                <p><a href="https://www.linkedin.com/in/alex-g-barbour/" target="_blank"> Linkedin</a></p>
+              </div>
+              <div class="col-lg-4 text-center">
+                <i class="fab fa-github fa-3x mb-3 sr-contact-2"></i>
+                <p><a href="https://github.com/AGBarbour" target="_blank"> GitHub <br></a></p>
+              </div>
+              <div class="col-lg-4 mr-auto text-center">
+                  <i class="fas fa-mail-bulk fa-3x mb-3 sr-contact-2"></i>
+                  <p><a href="mailto:alex.g.barbour@gmail.com"><span style="unicode-bidi:bidi-override; direction: rtl;">moc.liamg@ruobrab.g.xela</span></a></p>
+              </div>
+            </div>
 
+            <div class="row text-center">
+                <div class="col-lg-4 ml-auto text-center" style="margin-top:2rem;">
+                    <i class="far fa-file-pdf fa-3x mb-3 sr-contact-2"></i>
+                    <p><a href="img/resume.pdf" target="_blank"> Resume <br></a></p>
+                </div>
+                <div class="col-lg-4 mr-auto text-center" style="margin-top:2rem;">
+                    <i class="fas fa-hands-helping fa-3x mb-3 sr-contact-2"></i>
+                    <p><a href="img/Alford-Ref.pdf" target="_blank"> Reference <br></a></p>
+                </div>
+            </div>
 
-</body>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/web.min.js"></script>
 
+  </body>
 
 </html>
