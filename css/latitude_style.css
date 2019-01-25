@@ -1,8 +1,14 @@
 /* Body */
-html body{
+html, body{
     background-color: #cfc1c193;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border-bottom: 10px solid #095d68;
+    
+    /* overflow-y: hidden; */
+}
+
+html {
+    min-height: 100%;
+    border-bottom: 20px solid #095d68;
 }
 
 /* Navbar */
@@ -27,6 +33,7 @@ html body{
     }
 }
 
+
 /* container */
 .content {
     background-color: #ffffff;
@@ -36,6 +43,7 @@ html body{
     padding-right: 5%;
     padding-left: 5%;
     padding-bottom: 2.5%;
+    height: 150%;
 }
 
 .landimg {
@@ -99,6 +107,7 @@ h4 {
     margin-right: 1.5%;
     margin-left: 2.5%;
     margin-bottom: 2.5%;
+    height: 85%;
 }
 
  h2 {
